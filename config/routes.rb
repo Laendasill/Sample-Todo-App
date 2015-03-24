@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  root 'todo#index'
+  get 'todos/new', to: 'todo#new', as: 'new'
+  post 'todos', to: 'todo#create'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

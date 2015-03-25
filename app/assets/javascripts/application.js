@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require phaser
+//= require foundation
+
 //= require_tree .
+$(function() {
+  $(document).foundation();
+});

@@ -1,0 +1,39 @@
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar" data-topbar role="navigation" data-options="sticky_on: small">
+
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#">
+        <span></span></a>
+      </section>
+      <section class="middle tab-bar-section">
+        <h1 class="title"><%= link_to "Todo app", root_path %></h1>
+      </section>
+
+
+      <section class="right">
+        <ul class="right no-bullet">
+          <li class="active right">
+            <%= link_to "Sign Up", new_user_path, method: "GET", class: "button small right" %>
+            </li>
+        </ul>
+
+
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Menu</label></li>
+        <li><%= link_to "create Todo", new_todo_path , method: "GET", class: "button success" %>
+        </li> <li><a href="#">...</a>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <%= yield %>
+    </section>
+    <a class="exit-off-canvas"></a>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row full-width">
+  <div>
+
+  <% @todos.each do |todo| %>
+  <div class="panel">
+    <ul class="none">
+      <li> Todo: <%= todo.title %></li>
+      <li><%= todo.description %></li>
+    </ul>
+  </div>
+    <%end%>
+
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<%= form_for @user, url: {action: "create"}, html: {class: "row fullwidth right"} do |f| %>
+<div class="row">
+<fieldset class="">
+  <legend> Sign up form </legend>
+  <div class="">
+    <div class="small-11.columns">
+      <span class="prefix"> name </span> <%= f.text_field :name, rows: 1 %>
+    </div>
+  </div>
+  <div class="">
+    <div class="small-11.columns">
+      <span class="prefix"> email </span> <%= f.email_field :email, rows: 1 %>
+    </div>
+  </div>
+  <div class="">
+    <div class="small-11.columns">
+      <span class="prefix"> password </span> <%= f.password_field :password, rows: 5, class: "custom-input-class" %>
+    </div>
+  </div>
+
+  <%= f.submit class: "button expand"%>
+</fieldset>
+</div>
+  <% end %>

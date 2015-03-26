@@ -1,0 +1,16 @@
+<%= form_for @todo, url: {action: "create"}, html: {class: "form"} do |f| %>
+<fieldset>
+  <div class="row">
+    <div class="small-11.columns">
+      <span class="prefix"> title </span> <%= f.text_area :title, rows: 2 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-11.columns">
+      <span class="prefix"> description </span> <%= f.text_area :description, rows: 5, class: "custom-input-class" %>
+    </div>
+  </div>
+
+  <%= f.submit class: "button expand"%>
+</fieldset>
+<% end %>
